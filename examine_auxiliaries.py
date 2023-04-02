@@ -1,0 +1,1 @@
+# Plot the axuiliary variables that are used to predict resilience
