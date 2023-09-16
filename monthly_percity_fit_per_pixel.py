@@ -346,7 +346,7 @@ class Regression(PixelData):
             hf.append('y_test', y_test.to_frame(self.target))
             hf.append('y_train', y_train.to_frame(self.target))
             if self.which == 'Sign':
-                hf.append('y_pred_test', pd.DataFrame(y_pred_test[:, 0], index = y_test.index, columns = [self.target]))
+                hf.append('y_pred_test', pd.DataFrame(y_pred_test[:, 1], index = y_test.index, columns = [self.target]))
                 hf.append('y_pred_train', pd.DataFrame(y_pred_train[:, 1], index = y_train.index, columns = [self.target]))
             else:
                 hf.append('y_pred_test', pd.DataFrame(y_pred_test, index = y_test.index, columns = [self.target]))

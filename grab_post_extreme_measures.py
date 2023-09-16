@@ -254,11 +254,11 @@ def assemble_Xy(fid, scalar, static, ext_prop, me):
 
 
 if __name__ == '__main__':
-    name    = response_list[REPLACE1]
-    extreme = extremes_list[REPLACE2]
-    opt     = 'REPLACE3' # percity, pergrid
-    extent  = 'REPLACE4' # tiff_3x, tiff
-    met     = 'REPLACE5' # daymet, topowx, yyz
+    name    = 'MOD09Q1G_EVI' # response_list[REPLACE1]
+    extreme = 'heat_wave' # extremes_list[0] # extremes_list[REPLACE2]
+    opt     = 'percity' # 'REPLACE3' # percity, pergrid
+    extent  = 'tiff_3x' # 'REPLACE4' # tiff_3x, tiff
+    met     = 'daymet' # 'REPLACE5' # daymet, topowx, yyz
     M = 80
     N = 546
     S = 180

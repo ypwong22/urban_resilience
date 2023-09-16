@@ -78,8 +78,8 @@ rcParams['axes.titlesize'] = 6.
 # ------------------------------------------------------------------------------------'
 data = pd.DataFrame(np.nan, index = range(85), columns = ['pixel'])
 for fid in range(85):
-   mask = get_mask(fid, 'core', True, Setup().extent)
-   data.loc[fid] = np.nansum(mask)
+  mask = get_mask(fid, 'core', True, Setup().extent)
+  data.loc[fid] = np.nansum(mask)
 data.astype(int).to_csv(os.path.join(path_out, 'uhi', 'urban_size.csv'))
 
 
