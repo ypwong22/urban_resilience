@@ -14,18 +14,16 @@ def identify_low_extremes(vector, thres):
 
 
 def get_blocks(bool_mask):
-    """ Find start & end indices of True's
-    """
+    """Find start & end indices of True's"""
     bool_mask = bool_mask.astype(int)
     start = np.where(np.diff(np.insert(bool_mask, 0, 0)) == 1)[0]
-    end   = np.where(np.diff(np.append(bool_mask, 0)) == -1)[0]
+    end = np.where(np.diff(np.append(bool_mask, 0)) == -1)[0]
     return start, end
 
 
 def get_events(is_extreme, tvec):
-
     def _join_blocks(start, end):
-        """ Merge the start-end pairs that are separated by <= 3 months """
+        """Merge the start-end pairs that are separated by <= 3 months"""
         if len(start) == 0:
             return start, end
 
